@@ -14,3 +14,8 @@ When on campus, do the following:
 
 When off campus, first connect to USC's VPN service.
 Once connected, follow the _on campus_ procedure above.
+
+The list of currently available machines by name is 
+located in the `machine_names` file.
+
+
