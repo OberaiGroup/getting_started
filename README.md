@@ -3,6 +3,7 @@
 This repository is a resource for new users to the group.
 It includes examples of `.bash_profile`, `.bash_aliases`, 
 and a `.vimrc`. 
+To make use of these files, move each to your home `~` directory.
 
 ## Connecting to Group Machines
 
