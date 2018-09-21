@@ -1,5 +1,4 @@
-# Vim Crash Course 
-_An ambiguous and incomplete list of neat Vim features_
+# Vim Crash Course: _An ambiguous and incomplete list of neat Vim features_
 
 Below are comments on useful Vim tools and features.
 It is assumed that the user is in `Normal Mode` when 
