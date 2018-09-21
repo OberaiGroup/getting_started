@@ -1,0 +1,4 @@
+# Ignore...
+
+# Vim's swap files
+*.sw*
