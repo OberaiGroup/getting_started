@@ -1,11 +1,24 @@
-# Vim Crash Course
-## An ambiguous and incomplete list of useful vim features
+# Vim Crash Course 
+_An ambiguous and incomplete list of useful vim features_
 
 Below are comments on useful vim tools and features.
 It is assumed that the user is in `Normal Mode` when 
 issuing all below commands.
 The ___most___ important command to know is `:help`
 which presents Vim's inbuilt help manual.
+
+## Navigation
+Use the letters `hjkl` to navigate your cursor one character at a time
+through your file.
+```
+   k
+  h l
+   j
+```
+Fun fact: Vi is older than the arrow keys!
+This is why these letters were originally used;
+they are _still_ used because they are on the _home row_ of 
+a traditional QWERTY-style keyboard.
 
 ## Searching:
 For the scope of this write up, a _string_ is an 
@@ -70,4 +83,5 @@ at each match, vim will ask you how to proceed.
  - Autocompletion
  - Buffers
  - Visual Mode
- - Counting (++/--)
+ - Incremental Counting (++/--)
+ - Ditto
