@@ -1,7 +1,7 @@
 # Vim Crash Course 
-_An ambiguous and incomplete list of useful vim features_
+_An ambiguous and incomplete list of neat Vim features_
 
-Below are comments on useful vim tools and features.
+Below are comments on useful Vim tools and features.
 It is assumed that the user is in `Normal Mode` when 
 issuing all below commands.
 The ___most___ important command to know is `:help`
@@ -65,14 +65,29 @@ Use _Visual Mode_ to define ranges with atomic precision.
 The `<flags>` to know are `g` and `c`.
 The `g` flag is `global` and replaces __all__ matches on a line.
 The `c` flag asks for `confirmation`; 
-at each match, vim will ask you how to proceed.
+at each match, Vim will ask you how to proceed.
 
+## Directories
+There are two directories to know of when editing a file with Vim.
+The first is Vim's working directory; 
+this is where `vim` was called.
+The second is a file's directory; 
+this is where a file is.
+Example given, if your current directory is `/your/path/`
+and at the shell command line you type:
+```
+vim ../example.txt
+```
+Then Vim's working directory is `/your/path/`
+but your file's directory is `/your/`.
+Vim uses its working directory when needed for command evaluation.
+Following the above example `:e .` within Vim would 
+edit `/your/path/`, not `/your/`.
 
 
 
 ## Below are a list of topics to be completed:
  - File navigation
- - Directory navigation 
  - Multiple file instances
  - Shell interactivity
  - Basic editing
@@ -85,3 +100,4 @@ at each match, vim will ask you how to proceed.
  - Visual Mode
  - Incremental Counting (++/--)
  - Ditto
+ - Order of operations ( vim <())
