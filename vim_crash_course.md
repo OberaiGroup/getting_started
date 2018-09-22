@@ -8,7 +8,13 @@ which presents Vim's inbuilt help manual.
 
 ## Navigation
 Use the letters `hjkl` to navigate your cursor one character at a time
-through your file.
+through your file. 
+In order, 
+`h` is right, 
+`j` is down, 
+`k` is up, and
+`l` is right.
+Graphically:
 ```
    k
   h l
