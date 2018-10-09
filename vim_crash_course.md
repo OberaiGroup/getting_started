@@ -6,7 +6,7 @@ issuing all below commands.
 The ___most___ important command to know is `:help`
 which presents Vim's inbuilt help manual.
 
-## Navigation
+## Basic Navigation
 Use the letters `hjkl` to navigate your cursor one character at a time
 through your file. 
 In order, 
@@ -92,7 +92,7 @@ edit `/your/path/`, not `/your/`.
 
 
 ## Below are a list of topics to be completed:
- - File navigation
+ - Advanced Navigation
  - Multiple file instances
  - Shell interactivity
  - Basic editing
@@ -106,3 +106,4 @@ edit `/your/path/`, not `/your/`.
  - Incremental Counting (++/--)
  - Ditto
  - Order of operations ( vim <())
+ - Screen positioning
