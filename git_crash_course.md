@@ -18,9 +18,12 @@ the commit message is a comment of the changes made.
 
 Below is a list of common terms and their definition.
 
-| repository | 
-| branch |
-| commit |
-| pull | 
-| push |
+| repository | The collection of branches that form a software project.  |
+| _local_ repository | The copy of a repository on your working machine. |
+| _remote_ repository | The copy of a repository on someone else's machine (includes _github_'s servers). |
+| branch | A linear series of ordered commits. Branches can have sub branches and can be merged together. |
+| merge  | Combine two branches to form a single new one. |
+| commit | A change (addition or deletion) to a file or directory with a comment (commit message). |
+| pull | Update your local repository to match the one where you are pulling from. |
+| push | Update a remote repository to match your local one. |
 
