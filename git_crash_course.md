@@ -14,7 +14,7 @@ Every commit can contain additions or deletions of text, files, or directories
 along with a commit message;
 the commit message is a comment of the changes made.
 
-## Vocabulary
+## Vocabulary and Commands
 
 Below is a list of common terms and their definition.
 
@@ -28,4 +28,21 @@ Below is a list of common terms and their definition.
 | commit | A change (addition or deletion) to a file or directory with a comment (commit message). |
 | pull | Update your local repository to match the one where you are pulling from. |
 | push | Update a remote repository to match your local one. |
+
+The commands below are usable on the command line within any 
+initialized git repository; 
+the only exception is `git init` (explained below).
+| Command | Action |
+| :--- | :--- |
+| `git init` | Initialize a new local git repository. |
+| `git add <foo>`  | Add the changes to `<foo>` to the next commit; `<foo>` is any number of files and directories. |
+| `git rm <foo>`   | Remove the changes to `<foo>` to the next commit; `<foo>` is any number of files and directories. |
+| `git commit`     | Commit the changes (made by `git add` and `git rm`) to the working branch of your local repository. |
+| `git pull`       | Pull changes to your local repository. [Note, a remote repository must be set up first.](https://help.github.com/articles/adding-a-remote/) |
+| `git push`       | Push changes from your local repository. [Note, a remote repository must be set up first.](https://help.github.com/articles/adding-a-remote/) |
+| `git status`     | Prints the current status of your local repository. |
+| `git diff <foo>` | Shows the changes to `<foo>`; `<foo>` is any number of files and directories. |
+| `git clone <repo>` | Create a local copy of the remote repository `<repo>`. |
+
+## Typical Workflow
 
