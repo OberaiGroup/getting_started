@@ -32,6 +32,7 @@ Below is a list of common terms and their definition.
 The commands below are usable on the command line within any 
 initialized git repository; 
 the only exception is `git init` (explained below).
+All commands are meant to be executed on the same line despite what the below formatting may show.
 
 | Command | Action |
 | :--- | :--- |
@@ -44,6 +45,7 @@ the only exception is `git init` (explained below).
 | `git status`     | Prints the current status of your local repository. |
 | `git diff <foo>` | Shows the changes to `<foo>`; `<foo>` is any number of files and directories. |
 | `git clone <repo>` | Create a local copy of the remote repository `<repo>`. |
+| `git checkout <foo>` | Copy the latest committed version of `<foo>`. Effectively an _undo_ for file and directory changes. |
 
 ## Typical Workflow
-
+Below is a typical workflow when working with an already established 
