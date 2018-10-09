@@ -48,4 +48,53 @@ All commands are meant to be executed on the same line despite what the below fo
 | `git checkout <foo>` | Copy the latest committed version of `<foo>`. Effectively an _undo_ for file and directory changes. |
 
 ## Typical Workflow
-Below is a typical workflow when working with an already established 
+Below is a typical workflow when working with an already established git repository.
+It is assumed that the remote repository is already configured.
+
+
+First, update the local repository to match the remote.
+```
+git pull 
+```
+
+Make any edits and run tests as needed
+```
+vim <your files>
+./run_test.sh 
+./write_thesis.sh
+<etc.>
+```
+
+Check the current status of the local repository.
+```
+git status
+```
+
+This will likely show that `<your files>` have untracked changes.
+See what exactly these changes are:
+```
+git diff <your files>
+```
+
+Add the changes of these files to your next commit.
+```
+git add <your files>
+```
+
+For pedagogy, check the status again.
+```
+git status
+```
+
+This should now show that there are changes to `<your files>` staged
+to be committed. 
+Commit these changes:
+```
+git commit
+```
+You'll be prompted with a vim window where you write your commit message.
+Your commit message is a comment on what the changes are.
+A blank commit message will abort the commit.
+
+
+
