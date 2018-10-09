@@ -32,6 +32,7 @@ Below is a list of common terms and their definition.
 The commands below are usable on the command line within any 
 initialized git repository; 
 the only exception is `git init` (explained below).
+
 | Command | Action |
 | :--- | :--- |
 | `git init` | Initialize a new local git repository. |
