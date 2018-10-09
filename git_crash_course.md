@@ -18,6 +18,8 @@ the commit message is a comment of the changes made.
 
 Below is a list of common terms and their definition.
 
+| Word | Definition |
+| :---: | :---: |
 | repository | The collection of branches that form a software project.  |
 | _local_ repository | The copy of a repository on your working machine. |
 | _remote_ repository | The copy of a repository on someone else's machine (includes _github_'s servers). |
