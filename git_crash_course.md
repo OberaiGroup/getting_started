@@ -112,3 +112,10 @@ You may be prompted to enter your github username and password at this point.
 [Alternatively, you may be prompted to enter your ssh-key password if 
 you have enabled ssh keys.](https://help.github.com/articles/connecting-to-github-with-ssh/)
 You have now contributed to your repository!
+
+## Exercise
+Add your github username to the list below using the above information:
+```
+JustinClough
+
+```
