@@ -114,7 +114,11 @@ you have enabled ssh keys.](https://help.github.com/articles/connecting-to-githu
 You have now contributed to your repository!
 
 ## Exercise
-Add your github username to the list below using the above information:
+Add your github username to the list below using the above information.
+Note, you will need to [clone this repository](https://help.github.com/articles/cloning-a-repository/),
+[add the remote repository](https://help.github.com/articles/adding-a-remote/),
+and 
+[set up ssh keys](https://help.github.com/articles/connecting-to-github-with-ssh/) first.
 ```
 JustinClough
 
