@@ -1,0 +1,216 @@
+\documentclass[a4paper, 12pt]{article}
+\author{Justin L. Clough}
+\title{Basics of Iterative Methods for Linear Systems}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage[justification=centering]{caption}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{listings}
+\lstset{
+    escapechar=`,
+    language=C++,
+    numbers=left,
+    tabsize=2,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    breaklines=true,
+}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+\usepackage{nameref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,decorations.pathmorphing,decorations.markings,positioning,automata}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{pgfplotstable}
+\usepackage{makecell}
+\usepackage{verbatim}
+\usepackage[super]{nth}
+\usepackage{physics}
+
+\begin{document}
+\maketitle
+
+Consider solving the system $Ax=b$ with $x,b \in \mathcal{R}^n$; 
+assume that a unique exact solution, $x^*$, exists.
+For any row $r$ of this system:
+
+\begin{align}
+a_{r1}x_1 + a_{r2}x_2 + a_{r3}x_3 +  ... +  a_{rn}x_n - b_r &= 0 \\
+\sum_{i=1}^n a_{ri}x_i - b_r &= 0
+\end{align}
+
+\noindent
+If we solve for any particular $x_j$;
+
+\begin{align}
+a_{rj}x_j &= b_r - \sum_{\substack{ i=1 \\ i \neq j}}^n a_{ri}x_i \\
+x_j &= \frac{1}{a_{rj}} \left(b_r - \sum_{\substack{ i=1 \\ i \neq j}}^n a_{ri}x_i \right)
+\end{align}
+
+\noindent
+But if $a_{rj} = 0$ then our method blows up!
+Note that if we choose to always work on the diagonal (i.e., choose $r=j$), 
+then we are okay since most physics based problems have $a_{jj} \neq 0$.
+We may also now decompose $A$ to a diagonal, lower, and upper matrices $D,L,U$ such that
+$A=D-L-U$.
+The method is now:
+
+\begin{align}
+x_j &= \frac{1}{a_{jj}} \left(b_j - \sum_{\substack{ i=1 \\ i \neq j}}^n a_{ji}x_i \right) \\
+x &= D^{-1} (b + (L+U)x) 
+\end{align}
+
+\noindent
+But we can only use the method to solve for element $x_j$
+if we already know all other elements of $x$!
+Instead, use $x$ from the last (or initial guess) to update our current guess.
+Let the superscript represent the step number, e.g., $a^k$ 
+is the k\textsuperscript{th} step of estimating $a$ granted an 
+initial guess $a^0$ has been given.
+
+\begin{align}
+x^{k+1}_j &= \frac{1}{a_{jj}} \left(b_j - \sum_{\substack{ i=1 \\ i \neq j}}^n a_{ji}x^k_i \right) \\
+x^{k+1} &= D^{-1} (b + (L+U)x^k) 
+\end{align}
+
+\noindent
+The above is defined as the \emph{Jacobi Method} to estimate $x^{k+1}$.
+
+
+Observe that when calculating $x_j^k$, 
+we have already calculated updated values of $x_p^k$ $\forall p=1,2,...j-1$.
+Using these values right away gives the method:
+
+\begin{align}
+x^{k+1}_j &= \frac{1}{a_{jj}} \left(b_j - \sum_{i=1}^{j-1} a_{ji}x^{k+1}_i - \sum_{i=j+1}^{n} a_{ji}x^k_i \right) \\
+x^{k+1} &= (D-L)^{-1}Ux^{k+1} + (D-L)^{-1}b 
+\end{align}
+
+\noindent
+Above the is the \emph{Gauss-Seidel} method. 
+But what if $ |a_{jj}| << 1$?
+This will cause issues for Floating Point Evaluations (FPE).
+Instead ``relax'' the correction between iterations
+by $\omega\in(0,2)$:
+
+\begin{align}
+x^{k+1}_j &= (1-\omega)x^k_j + \frac{\omega}{a_{jj}} \left(b_j - \sum_{i=1}^{j-1} a_{ji}x^{k+1}_i - \sum_{i=j+1}^{n} a_{ji}x^k_i \right) \\
+x^{k+1} &= (1-\omega)x^k + \omega \left( (D-L)^{-1}Ux^{k+1} + (D-L)^{-1}b \right)
+\end{align}
+
+\noindent
+which then defines the \emph{Successive Over Relaxation Method} (SOR).
+All three above methods are \emph{Stationary Iterative Methods}
+as the interim estimates $x^k$ can both over or under estimate
+the exact, stationary, solution $x^*$.
+
+Another group of iterative solvers are \emph{Krylov Subspace Methods}.
+This group includes the \emph{Conjugate Gradient} (CG)
+and \emph{Generalized Minimum Residual} (GMRES) methods.
+These methods work by successively building a subspace
+of the solution space until the solution space 
+(and solution) is sufficiently represented.
+The CG method is described below.
+
+Want to again solve $Ax=b$ where $x,b\in\mathcal{R}^n$ and
+it is assumed that a unique exact solution $x^*$ exists.
+We also restrict $A$ to be symmetric and positive-definite.
+First, define the \emph{A inner product} between $u,v\in\mathcal{R}^n$ as:
+
+\begin{equation}
+u^T A v = (u, v)_A
+\end{equation}
+
+\noindent 
+and if this $A$ inner product is zero, then $u$ and $v$ 
+are \emph{A-orthogonal} with respect to each other.
+Let there exists a set of vectors 
+$\mathcal{P} = \{p_i | p_i \in \mathcal{R}^n, (p_i,p_j)_A=\delta_{ij}\forall i,j=1,2,...,n \}$.
+This means that $\{p_i\}_{i=1}^n$ form a basis of $\mathcal{R}^n$
+which is where the solution lives:
+
+\begin{equation}
+x^* = \sum_{i=1}^n \alpha_i p_i
+\end{equation}
+
+\noindent
+with $\alpha_i \in \mathcal{R}$. 
+Returning to the original problem,
+apply the new information, 
+and left-dotting with $p^T_k$:
+
+\begin{align}
+Ax &= b \\
+A\sum_{i=1}^n \alpha_i p_i &= b \\
+p_k^T A \sum_{i=1}^n \alpha_i p_i &= p_k^T b \\
+\sum_{i=1}^n \alpha_i (p_k,p_i)_A = (p_k,b)
+\end{align}
+
+\noindent
+But recall that $(p_k,p_i)=\delta_{ik}$ and so
+the summation breaks down into a single term:
+
+\begin{align}
+\alpha_i (p_i,p_i)_A &= (p_i,b) \\
+\Rightarrow
+  \alpha_i &= \frac{ (p_i,b)}{ (p_i,p_i)_A}
+\end{align}
+
+\noindent
+There is now a way to calculate the $\{\alpha_i\}_{i=1}^n$.
+But where do the $\{p_i\}_{i=n}^n$ come from?
+To generate $\{p_i\}_{i=n}^n$, 
+repose the linear problem as:
+
+\begin{equation}
+r^k = b - A x^k
+\end{equation}
+
+\noindent
+where the previous iteration notation is used 
+and $r^k$ is the residual from using 
+the k\textsuperscript{th} guess, $x^k$.
+Naively, we want to ``minimize'' $r$ but it is a vector;
+instead define:
+
+\begin{equation}
+f(x) = \frac{1}{2} x^T A x - x^T b
+\end{equation}
+
+\noindent
+which has the following properties:
+\begin{enumerate}
+  \item $f(x)$ has a minimum at $x=x^*$ (i.e., $r = 0$).
+  \item $f(x)$ is quadratic with respect to $x$.
+  \item $f(x)$ is positive so long as $A$ is Symmetric-Positive-Definite.
+  \item The gradient of $f(x^k)=-r^k$; 
+          i.e., $r^k$ ``points downhill'' in the steepest direction at
+          the guess $k$.
+\end{enumerate}
+
+\noindent
+Now pick any $x^0$ as an initial guess which gives 
+a corresponding $r^0$ which is taken as the first basis.
+We calculate $\alpha_0$ as shown and let $x^1=x^0+\alpha_0 p_0$.
+To guarantee $(p_i,p_k)=\delta_{ik}$ we use a 
+Gram-Schmidt based method:
+
+\begin{equation}
+p_k = r_k - \sum_{i=1}^{k-1} \frac{ (p_i,r_k)_A}{ (p_i,p_i)_A} p_i
+\end{equation}
+
+\noindent
+We now have a method to calculate both $\{\alpha_i\}_{i=1}^n$ 
+and  $\{p_i\}_{i=1}^n$.
+This method  can be used over $k$ steps until $||r^k||_{L_2}$
+is below an acceptable tolerance. 
+Note that (with exact calculations) $x^*$ is guaranteed in $n$ steps!
+
+\end{document}
