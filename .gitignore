@@ -2,3 +2,7 @@
 
 # Vim's swap files
 *.sw*
+
+# Interim *TeX files
+**/*.aux
+**/*.log
