@@ -117,16 +117,33 @@ non-white space character on that line.
 Within any line, you can go to the first character 
 with `0` and the end of the line with `$`.
 
+## Sessions
+When you start `vim` you start a session.
+Within a session, Vim does various things 
+behind the scenes; Vim...
+ - records undo trees for each file,
+ - stores a buffer of accessed files,
+ - populates a list of keywords for autocompletion,
+ - and many other things.
+
+For these reasons, you may want to _save_ a session.
+Do so with `:mksession <name>.vim` to save 
+you session to disk with name `<name>.vim`.
+To load a session at the command line, use
+`vim -S <name>.vim`.
+You can overwrite old session saves to updated
+them with `:mks!`.
+
 
 
 
 ## Below are a list of topics to be completed:
  - Multiple file instances
  - Shell interactivity
- - Sessions
  - Basic editing
  - Advanced editing
  - words and WORDS
+ - Paragraphs
  - Spelling
  - Autocompletion
  - Buffers
@@ -137,3 +154,5 @@ with `0` and the end of the line with `$`.
  - Screen positioning
  - Code Folding
  - Marks
+ - `view`
+ - Undo, Redo, and trees
