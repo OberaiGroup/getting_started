@@ -92,24 +92,35 @@ edit `/your/path/`, not `/your/`.
 ## Advanced Navigation
 In addition to moving one character at a time with `h,j,k,l`, 
 you can move your cursor with much larger jumps.
+
 The simplest step is multiplicity.
 Any of `h,j,k,l` can be preceded by a number
 which has the meaning of using that key that number of times.
 E.g., `8j` will go down 8 lines.
+You can move forward an entire _word_ with `w`
+and backward with `b`.
+These also work with multiplicity;
+`4w` will put you forward 4 _word_s.
 
 Use `G` to go to the last line of the file; 
 `gg` will take you to the start of a file.
+You may also directly state the line you want to move to 
+using `:<line_number>`.
+For example, `:19` will take you to line number 19.
+
 Using `H` will take you to the first line of the file
 that is showing in your current window; 
 `L` will take you to the last. 
 A way to remember these are `H`ome and `L`ast.
-
+Both of these commands will take you to the first 
+non-white space character on that line.
 Within any line, you can go to the first character 
 with `0` and the end of the line with `$`.
 
 
+
+
 ## Below are a list of topics to be completed:
- - Advanced Navigation
  - Multiple file instances
  - Shell interactivity
  - Sessions
