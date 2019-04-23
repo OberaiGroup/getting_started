@@ -52,7 +52,7 @@ Strings are made of atoms
   Note this behavior differs from the typical bash command line wild card definition.
   For example `/abc*` finds `ab`, `abc`, `abcc`, `abccc`, and so on. 
 - Putting together the atomic wild card and atomic multiplier yield a traditional wild card.
-  For example `/ab.*cd` find all string which begin with `ab` and end with `cd`.
+  For example `/ab.*cd` find all strings which begin with `ab` and end with `cd`.
 
 ## Replacing
 The general syntax to search for `foo` and replace with `bar` is
@@ -89,16 +89,33 @@ Vim uses its working directory when needed for command evaluation.
 Following the above example `:e .` within Vim would 
 edit `/your/path/`, not `/your/`.
 
+## Advanced Navigation
+In addition to moving one character at a time with `h,j,k,l`, 
+you can move your cursor with much larger jumps.
+The simplest step is multiplicity.
+Any of `h,j,k,l` can be preceded by a number
+which has the meaning of using that key that number of times.
+E.g., `8j` will go down 8 lines.
+
+Use `G` to go to the last line of the file; 
+`gg` will take you to the start of a file.
+Using `H` will take you to the first line of the file
+that is showing in your current window; 
+`L` will take you to the last. 
+A way to remember these are `H`ome and `L`ast.
+
+Within any line, you can go to the first character 
+with `0` and the end of the line with `$`.
 
 
 ## Below are a list of topics to be completed:
  - Advanced Navigation
  - Multiple file instances
  - Shell interactivity
+ - Sessions
  - Basic editing
  - Advanced editing
  - words and WORDS
- - Sessions
  - Spelling
  - Autocompletion
  - Buffers
@@ -107,3 +124,5 @@ edit `/your/path/`, not `/your/`.
  - Ditto
  - Order of operations ( vim <())
  - Screen positioning
+ - Code Folding
+ - Marks
