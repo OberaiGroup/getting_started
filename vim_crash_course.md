@@ -134,12 +134,33 @@ To load a session at the command line, use
 You can overwrite old session saves to updated
 them with `:mks!`.
 
+## Shell Interactivity
+You are able to work with the shell in two ways with Vim.
+Different options are better suited to different tasks.
+
+The first is to spawn a subshell; do so with `:sh`.
+This will create a new shell within the one hosting 
+your Vim session in Vim's working directory.
+This will have all the environment variables as
+the original shell but none of the jobs.
+A way to check if you in a subshell is to check the
+shell environment variable `SHLVL` (shell-level)
+by using `echo $SHLVL` at the command line.
+To leave this subshell and return to Vim,
+simply use `exit`.
+
+The second way is to pass commands to the original shell.
+Pass `<command>` to the shell with `:!<command>`.
+This will stop your `vim` process, 
+run `<command>` and display the output.
+Hitting the `Enter` key will return you to
+your `vim` session.
+
 
 
 
 ## Below are a list of topics to be completed:
  - Multiple file instances
- - Shell interactivity
  - Basic editing
  - Advanced editing
  - words and WORDS
