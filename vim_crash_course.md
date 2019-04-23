@@ -157,8 +157,6 @@ Hitting the `Enter` key will return you to
 your `vim` session.
 
 
-
-
 ## Below are a list of topics to be completed:
  - Multiple file instances
  - Basic editing
