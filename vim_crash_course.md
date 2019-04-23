@@ -100,7 +100,7 @@ E.g., `8j` will go down 8 lines.
 You can move forward an entire _word_ with `w`
 and backward with `b`.
 These also work with multiplicity;
-`4w` will put you forward 4 _word_s.
+`4w` will put you forward 4 _words_.
 
 Use `G` to go to the last line of the file; 
 `gg` will take you to the start of a file.
