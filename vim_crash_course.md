@@ -172,7 +172,7 @@ Use a capital `-O` flag for vertical splits.
 The second way is to add new tabs to your session.
 _Tabs_ here have the same meaning as the tabs in a typical web browser.
 Use `:tabnew <filename>` to create a new tab viewing
-`<filename`. 
+`<filename>`. 
 Omitting `<filename>` here will open a new tab
 on a blank and nameless file;
 this can be helpful to use as a scratch space.
