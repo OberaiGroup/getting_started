@@ -25,6 +25,21 @@ This is why these letters were originally used;
 they are _still_ used because they are on the _home row_ of 
 a traditional QWERTY-style keyboard.
 
+## Basic Editing
+There are many ways to edit a file with Vim;
+those which enter and leave you in `Insert Mode` are discussed here.
+Read the _Advanced Editing_ section for more.
+To leave `Normal Mode` and enter `Insert Mode`
+to insert text at the start of your cursor, use `i`;
+use `a` to append text after the location of your cursor.
+
+You can use `I` to insert text in front of 
+the first non-white space character of your current line.
+Likewise, `A` will append text to the end of your current line.
+
+Use `o` to enter text into a new line below the current;
+use `O` (capital) to do so for a line above the current.
+
 ## Searching:
 For the scope of this write up, a _string_ is an 
 ordered collection of atoms;
@@ -184,7 +199,6 @@ Once done, close a tab with `:tabc`.
 
 Buffers are another way to work with multiple files;
 these are discussed in the _Buffers_ section.
-
 
 
 
