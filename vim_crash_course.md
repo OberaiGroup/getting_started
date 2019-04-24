@@ -156,9 +156,39 @@ run `<command>` and display the output.
 Hitting the `Enter` key will return you to
 your `vim` session.
 
+## Working With Multiple Files
+There are a few ways to work with multiple files based on your needs.
+Two basic concepts are splitting the screen and adding new tabs.
+Split the screen horizontally with `<filename>` 
+with `:sp <filename>`
+or vertically with `:vsp <filename>`;
+omitting `<filename>` will split the current working file.
+
+A quick way to open multiple files from the command line is
+`vim -o <file1> <file2> .... <file_N>`
+which will open all given files with horizontal splits.
+Use a capital `-O` flag for vertical splits.
+
+The second way is to add new tabs to your session.
+_Tabs_ here have the same meaning as the tabs in a typical web browser.
+Use `:tabnew <filename>` to create a new tab viewing
+`<filename`. 
+Omitting `<filename>` here will open a new tab
+on a blank and nameless file;
+this can be helpful to use as a scratch space.
+Navigate through tabs with `:tabn` and `:tabp`
+to go to the next and previous tabs, respectively.
+Jump directly to the _Nth_ tab with `<N>gt`;
+e.g., `3gt` will go to the 3rd tab.
+Once done, close a tab with `:tabc`.
+
+Buffers are another way to work with multiple files;
+these are discussed in the _Buffers_ section.
+
+
+
 
 ## Below are a list of topics to be completed:
- - Multiple file instances
  - Basic editing
  - Advanced editing
  - words and WORDS
