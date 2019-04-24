@@ -40,7 +40,7 @@ Likewise, `A` will append text to the end of your current line.
 Use `o` to enter text into a new line below the current;
 use `O` (capital) to do so for a line above the current.
 
-## Searching:
+## Searching
 For the scope of this write up, a _string_ is an 
 ordered collection of atoms;
 an _atom_ is any traditional character along with other, typically unseen, 
