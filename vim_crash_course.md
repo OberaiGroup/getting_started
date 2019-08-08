@@ -10,7 +10,7 @@ which presents Vim's inbuilt help manual.
 Use the letters `hjkl` to navigate your cursor one character at a time
 through your file. 
 In order, 
-`h` is right, 
+`h` is left, 
 `j` is down, 
 `k` is up, and
 `l` is right.
@@ -55,6 +55,8 @@ Strings can be searched for within an open file.
 - Search for `foo` from current position downward with `/foo`
   Note that this will also find the `foo` in `football`.
 - Search for `bar` from current position upward with `?bar`
+
+For both of the above, you can also jump to other matches:
   + Go to the next match with `n`
   + Go to the previous match with `N`
 
@@ -68,6 +70,9 @@ Strings are made of atoms
   For example `/abc*` finds `ab`, `abc`, `abcc`, `abccc`, and so on. 
 - Putting together the atomic wild card and atomic multiplier yield a traditional wild card.
   For example `/ab.*cd` find all strings which begin with `ab` and end with `cd`.
+
+Lastly, adding a `\c` to the end of a search makes it case-insensitive. 
+E.g., `/foo\c` will find `foo`, `Foo`, `FOo`, `fOo`, and so on.
 
 ## Replacing
 The general syntax to search for `foo` and replace with `bar` is
@@ -203,7 +208,6 @@ these are discussed in the _Buffers_ section.
 
 
 ## Below are a list of topics to be completed:
- - Basic editing
  - Advanced editing
  - words and WORDS
  - Paragraphs
