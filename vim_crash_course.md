@@ -205,6 +205,14 @@ Once done, close a tab with `:tabc`.
 Buffers are another way to work with multiple files;
 these are discussed in the _Buffers_ section.
 
+## Ditto (Single Repeats)
+A single command can be repeated by pressing `.` (the period key). 
+For example, `dw.` will first delete the next word (`dw`) then
+delete the next word as well (`.`).
+
+
+
+
 
 
 ## Below are a list of topics to be completed:
@@ -216,7 +224,6 @@ these are discussed in the _Buffers_ section.
  - Buffers
  - Visual Mode
  - Incremental Counting (++/--)
- - Ditto
  - Order of operations ( vim <())
  - Screen positioning
  - Code Folding
