@@ -137,6 +137,10 @@ non-white space character on that line.
 Within any line, you can go to the first character 
 with `0` and the end of the line with `$`.
 
+Use `<ctrl>u` to go up one half page in the
+current file and `<ctrl>d` to go down an
+equivalent amount.
+
 ## Sessions
 When you start `vim` you start a session.
 Within a session, Vim does various things 
@@ -210,7 +214,19 @@ A single command can be repeated by pressing `.` (the period key).
 For example, `dw.` will first delete the next word (`dw`) then
 delete the next word as well (`.`).
 
+## Spelling
+Vim can perform basic spell checking. 
+To enable it, use `:set spell` and
+disable it with `:set nospell`. 
+Once enabled, misspelled words will be highlighted by vim.
 
+To see vim's suggestions on correct spelling: 
+navigate so that the cursor is on the word,
+then `z=` will present an ordered list of vim's suggestions.
+Select a suggestion by selecting a number and then `<enter>`;
+ignore a suggestion with `<esc>`. 
+You can jump to the next misspelling with `]s` and
+to the previous with `[s`.
 
 
 
@@ -219,7 +235,6 @@ delete the next word as well (`.`).
  - Advanced editing
  - words and WORDS
  - Paragraphs
- - Spelling
  - Autocompletion
  - Buffers
  - Visual Mode
