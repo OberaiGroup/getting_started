@@ -40,6 +40,51 @@ Likewise, `A` will append text to the end of your current line.
 Use `o` to enter text into a new line below the current;
 use `O` (capital) to do so for a line above the current.
 
+## Advanced Editing
+Vim gives you the ability to edit words, WORDS, and whole lines
+with a few keystrokes. To delete the current line, press `dd`;
+to delete the next word, use `dw`. 
+To delete the remaining characters on a line, use `D`. 
+Note that _deleting_ text with these methods
+is similar to the _cut_ feature many other text editors have;
+the text is removed from the active file but a copy of 
+it is store in memory.
+
+Similar methods can be used to change text with `c`.
+`cc` will delete the current line and place you in Insert Mode.
+`cw` will delete the next word and place you in Insert Mode.
+Lastly, `C` will delete the rest of the line and place you 
+in Insert Mode.
+
+Pressing `r` will replace a single character.
+Alternatively, `R` will put you in Replace Mode.
+This will at first seem similar to insert mode, however,
+you can only write over character which already exist.
+You will not be able to delete text with the `backspace` key,
+only the `delete` key.
+
+Similar to most other text editors, Vim supports _cut_, _copy_, and _paste_
+-like operations. The _cut_ feature is explained earlier in these section
+with the `d` family of operations. 
+
+In Vim terminology, to _copy_ text is to _yank_ it. 
+You can _yank_ via the `y` family of operations.
+`yy` will yank the current line. 
+To yank this and the next 3 lines down, use `y3j`.
+Similar methods work for any specific number of lines above
+the current.
+For both these methods, Vim will display a message at the bottom
+right-hand corner of the screen noting `<k> lines yanked`.
+Yanking can be combined with Visual Mode to carefully text text;
+once the needed text has been visually selected, press `y` to yank it. 
+Once text is either deleted or yanked (_cut_ or _copy_) it can then be
+pasted with the `p` family of operations. 
+Just `p` will paste the text after the current character;
+`P` will paste is before.
+Adding an integer to the command will paste that many times.
+E.g., `3p` will paste three times after the current
+character.
+
 ## Searching
 For the scope of this write up, a _string_ is an 
 ordered collection of atoms;
@@ -218,11 +263,11 @@ delete the next word as well (`.`).
 Vim can perform basic spell checking. 
 To enable it, use `:set spell` and
 disable it with `:set nospell`. 
-Once enabled, misspelled words will be highlighted by vim.
+Once enabled, misspelled words will be highlighted by Vim.
 
-To see vim's suggestions on correct spelling: 
+To see Vim's suggestions on correct spelling: 
 navigate so that the cursor is on the word,
-then `z=` will present an ordered list of vim's suggestions.
+then `z=` will present an ordered list of Vim's suggestions.
 Select a suggestion by selecting a number and then `<enter>`;
 ignore a suggestion with `<esc>`. 
 You can jump to the next misspelling with `]s` and
@@ -232,7 +277,6 @@ to the previous with `[s`.
 
 
 ## Below are a list of topics to be completed:
- - Advanced editing
  - words and WORDS
  - Paragraphs
  - Autocompletion
