@@ -5,12 +5,12 @@ Below is a list of useful and *free* online machine learning/deep learning resou
 Use these resources to brush-up your knowledge about linear algebra, probability, and statistics. One can easily skip these courses if they've good grasp over these subjects.
 
 1. [Probability and Statistics (Stanford)](https://online.stanford.edu/courses/gse-yprobstat-probability-and-statistics): This self-paced course covers basic concepts in probability and statistics spanning over four fundamental aspects of machine learning: exploratory data analysis, producing data, probability, and inference.
-2. [Linear Algebra (MIT)](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/): One of the best linear algebra course taught by one and only prof. Gilbert Strang.
+2. [Linear Algebra (MIT)](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/): One of the best linear algebra course. Taught by one and only prof. Gilbert Strang.
 
 ## Recommended courses
 Use these courses to learn about basics and some advanced topics of modern day ML/DL.
 1. [Machine learning (Coursera)](https://www.coursera.org/learn/machine-learning) One of the most popular course on machine learning. Depending upon background, one may skip first two week's content. Important content: week 3,4,5,6. Week 7 onwards are interesting but not too useful.
-2. [Convolution neural networks for visual recognition (Stanford)](http://cs231n.stanford.edu/) Probably the most useful and important course in this list with nice mix of theory and code. Has nice warm-up exercise of numpy/python for the beginners. Lecture videos on YouTube. *Do check for the latest version of the course on course website.*
+2. [Convolution neural networks for visual recognition (Stanford)](http://cs231n.stanford.edu/) Probably the *most useful* and *important* course in this list with nice mix of theory and code. Has nice warm-up exercise of numpy/python for the beginners. Lecture videos on [YouTube](https://www.youtube.com/playlist?list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk) (1-9 important). *Do check for the latest version of the course on course website.*
 
 ## Advanced resources
 Use these resources if you're interested in some specific and/or advanced topics.
