@@ -15,8 +15,8 @@ Use these courses to learn about basics and some advanced topics of modern day M
 ## Advanced resources
 Use these resources if you're interested in some specific and/or advanced topics.
 1. Reinforcement learning
-   1. [Introduction to deep reinforcement learning (Deepmind)](https://www.coursera.org/specializations/probabilistic-graphical-models) A relatively old one for a field like RL, but nice introductory course taught by the creater of Alpha Go.
+   1. [Introduction to deep reinforcement learning (Deepmind)](https://www.coursera.org/specializations/probabilistic-graphical-models) A relatively old one for a field like RL, but nice introductory course taught by the creator of Alpha Go.
    1. [Reinforcement learning bootcamp (Berkeley)](https://sites.google.com/view/deep-rl-bootcamp/lectures?fbclid=IwAR3p_GSDysSZN9I3ib43Z-F5CzdYKmkHwh9o_eabSLFw7aP648y0D4jDdqI) Workshop style videos starting from basics and going to some advanced topics.
 2. [Deep generative models (Stanford)](https://deepgenerativemodels.github.io/) Interesting course for anyone interested in deep generative models including GANs, VAEs, Auto-regressive models etc.
 3. [Probabilistic graphical models (Stanford)](https://www.coursera.org/specializations/probabilistic-graphical-models) A nice course for anyone interested in probabilistic ML and graphical models.
-4. [Neural networks for machine learning (UTorrento)](https://www.cs.toronto.edu/~hinton/coursera_lectures.html) This is a relatively old course (around 2012) and some of the contents are now outdated, but contains some gold nuggets and is must for anyone deeply interested in understanding the evolution of many mdern day algorithms (taught by the legendary Jeff Hinton).
+4. [Neural networks for machine learning (UTorrento)](https://www.cs.toronto.edu/~hinton/coursera_lectures.html) This is a relatively old course (around 2012) and some of the contents are now outdated, but contains some gold nuggets and is must for anyone deeply interested in understanding the evolution of many modern day algorithms (taught by the legendary Jeff Hinton).
