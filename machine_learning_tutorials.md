@@ -1,8 +1,8 @@
 # A (non-comprehensive) list of useful ML/DL resources
-Below is a list of useful and *free* online machine learning/deep learning resources to get started with most of the projects of this group. Please keep in mind that due to dynamic and fast-paced nature of the field, some of these resources (specially the adanced topics) might not be as relavent as they're at the time of posting.
+Below is a list of useful and *free* online machine learning/deep learning resources to get started with most of the projects of this group. Please keep in mind that due to dynamic and fast-paced nature of the field, some of these resources (specially the adanced topics) might not be as relevant as they're at the time of posting.
 
 ## Pre-requisites
-Use these resources to brush-up your knowledge about linear algebra, probability, and statistics. One can easily skip these courses if they've good grasp over these subjects.
+Use these resources to brush-up your knowledge about linear algebra, probability, and statistics. Skip this if you already have decent background in these topics.
 
 1. [Probability and Statistics (Stanford)](https://online.stanford.edu/courses/gse-yprobstat-probability-and-statistics): This self-paced course covers basic concepts in probability and statistics spanning over four fundamental aspects of machine learning: exploratory data analysis, producing data, probability, and inference.
 2. [Linear Algebra (MIT)](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/): One of the best linear algebra course. Taught by one and only prof. Gilbert Strang.
