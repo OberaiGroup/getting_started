@@ -4,7 +4,7 @@ Below is a list of useful and *free* online machine learning/deep learning resou
 ## Pre-requisites
 Use these resources to brush-up your knowledge about linear algebra, probability, and statistics. Skip this if you already have decent background in these topics.
 
-1. [Probability and Statistics (Stanford)](https://online.stanford.edu/courses/gse-yprobstat-probability-and-statistics): This self-paced course covers basic concepts in probability and statistics spanning over four fundamental aspects of machine learning: exploratory data analysis, producing data, probability, and inference.
+1. [Introduction to Probability and Statistics (MIT)](https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/index.htm): This self-paced course covers basic concepts in probability and statistics including random variables, probability distribution, Bayesian inference and confidence interval. 
 2. [Linear Algebra (MIT)](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/): One of the best linear algebra course. Taught by one and only prof. Gilbert Strang.
 
 ## Recommended courses
